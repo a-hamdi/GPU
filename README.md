@@ -97,4 +97,5 @@ Implemented CUDA-based matrix transposition. Optimized the implementation by lev
 ### Reading:  
 - Read **Chapter 5** of the PMPP book.  
   - Learned about Performance Considerations including optimizing memory access patterns, advanced use of shared memory for performance and dynamic Partitioning of Resources .  
-
+- Read **Chapter 6** of the PMPP book.  
+  - Learned about Numerical Considerations including IEEE Format, Arithmetic Accuracy and Rounding and Linear Solvers and Numerical Stability. 
