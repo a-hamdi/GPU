@@ -99,3 +99,33 @@ Implemented CUDA-based matrix transposition. Optimized the implementation by lev
   - Learned about Performance Considerations including optimizing memory access patterns, advanced use of shared memory for performance and dynamic Partitioning of Resources .  
 - Read **Chapter 6** of the PMPP book.  
   - Learned about Numerical Considerations including IEEE Format, Arithmetic Accuracy and Rounding and Linear Solvers and Numerical Stability. 
+
+## Day 7
+
+### File: `one_d_convolution.cu`
+**Summary:**  
+Implemented a simple 1D convolution algorithm using CUDA. This involved sliding a kernel (or filter) over an input array and computing the weighted sum of elements. Each thread was assigned to compute the convolution at a specific position in the output array.  
+
+**Learned:**  
+- Basics of 1D convolution in parallel, including mapping threads to positions in the output array.
+- How to handle boundary conditions (halo cells) when the kernel partially overlaps the input array bounds.
+- Importance of memory layout and contiguous access for kernel weights and input arrays to maximize performance.
+
+---
+
+### File: `one_d_convolution_with_tiling.cu`
+**Summary:**  
+Implemented an optimized version of the 1D convolution algorithm using tiling and shared memory. Divided the input array into tiles and loaded data into shared memory, minimizing global memory accesses for better performance. Used halo cells to handle edge cases where kernel overlap extended into neighboring tiles.  
+
+**Learned:**  
+- Tiling in CUDA: Dividing input data into manageable chunks and leveraging shared memory to reduce global memory latency.
+- Use of **halo cells** to ensure correctness at tile boundaries during convolution.
+- How to balance computation and memory usage in tiled algorithms to improve performance.
+- Proper synchronization of threads within a block (using `__syncthreads()`) to ensure data consistency in shared memory.
+
+---
+
+
+### Reading:  
+- Read **Chapter 7** of the PMPP book.  
+  - Learned about parallel patterns for convolution, including basic algorithms, memory optimizations with constant and shared memory, and tiling techniques with halo cells for 1D and 2D convolution.
