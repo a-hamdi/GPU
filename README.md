@@ -124,7 +124,17 @@ Implemented an optimized version of the 1D convolution algorithm using tiling an
 - Proper synchronization of threads within a block (using `__syncthreads()`) to ensure data consistency in shared memory.
 
 ---
+### File: `2d_convolution_with_tiling.cu`  
+**Summary:**  
+Implemented a 2D convolution algorithm with tiling optimization using CUDA. Divided the input matrix into tiles and leveraged shared memory to minimize global memory accesses, ensuring efficient computation of the convolution kernel across the matrix. Handled boundary conditions using halo cells to process edges and corners correctly.  
 
+**Learned:**  
+- Extended tiling techniques from 1D to 2D data structures for efficient parallel computation.  
+- Optimized global memory access by using shared memory for each tile.  
+- Synchronization of threads for consistent shared memory usage within a block (`__syncthreads()` for proper execution order).  
+- Efficient handling of edge cases and boundary cells in 2D convolution.  
+
+--- 
 
 ### Reading:  
 - Read **Chapter 7** of the PMPP book.  
