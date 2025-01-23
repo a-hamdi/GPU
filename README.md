@@ -139,3 +139,17 @@ Implemented a 2D convolution algorithm with tiling optimization using CUDA. Divi
 ### Reading:  
 - Read **Chapter 7** of the PMPP book.  
   - Learned about parallel patterns for convolution, including basic algorithms, memory optimizations with constant and shared memory, and tiling techniques with halo cells for 1D and 2D convolution.
+
+## Day 8  
+### File: `prefixsum_brent_kung_algorithm.cu`  
+**Summary:**  
+Implemented the Brent-Kung algorithm for parallel prefix sum (scan) in CUDA, designing a work-efficient strategy to compute prefix sums across an array.  
+
+**Learned:**  
+- The fundamentals of hierarchical parallel scan algorithms and the Brent-Kung approach for work efficiency.
+- How to divide the scan operation into an **up-sweep (reduce)** phase and a **down-sweep** phase using shared memory for efficient computation.  
+- Optimized thread synchronization and memory usage for large input arrays.  
+
+### Reading:  
+- Read **Chapter 8** of the PMPP book.  
+  - Learned about different parallel patterns for prefix sum computation, focusing on performance, memory access efficiency, and work-efficient algorithms like hierarchical scans.  
