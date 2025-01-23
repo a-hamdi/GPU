@@ -153,3 +153,11 @@ Implemented the Brent-Kung algorithm for parallel prefix sum (scan) in CUDA, des
 ### Reading:  
 - Read **Chapter 8** of the PMPP book.  
   - Learned about different parallel patterns for prefix sum computation, focusing on performance, memory access efficiency, and work-efficient algorithms like hierarchical scans.  
+- Read **Chapter 9** of the PMPP book.  
+  - Learned about different parallel patterns for Parallel Histogram Computation, focusing on Atomic Operations,  Interleaved Partitioning, Privatization and Aggregation.  
+
+
+### Future challenges:
+Day 15 - mandatory FA2-forward
+Day 20 - mandatory FA2-bakcwards
+Day 20 - optional fused chunked CE loss + backwards. we can use Liger Kernel as reference implementation to copy. 
