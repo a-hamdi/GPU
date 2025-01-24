@@ -2,6 +2,8 @@
 
 This document serves as a log of the progress and knowledge I gained while working on CUDA programming and studying the **PMPP (Parallel Programming and Optimization)** book.
 
+[Mentor](https://github.com/hkproj/)
+[Bro in the 100 days challenge](https://github.com/1y33/100Days)
 ---
 
 ## Day 1
@@ -155,6 +157,21 @@ Implemented the Brent-Kung algorithm for parallel prefix sum (scan) in CUDA, des
   - Learned about different parallel patterns for prefix sum computation, focusing on performance, memory access efficiency, and work-efficient algorithms like hierarchical scans.  
 - Read **Chapter 9** of the PMPP book.  
   - Learned about different parallel patterns for Parallel Histogram Computation, focusing on Atomic Operations,  Interleaved Partitioning, Privatization and Aggregation.  
+
+### Day 9  
+
+### File: `flash_attention_forward.cu`  
+**Summary:**  
+Implemented a forward pass for Flash Attention in CUDA, based on the Flash Attention paper. The code is still a work in progress and might produce incorrect results. A refined and fully functional version will be updated in the coming days.  
+
+**Learned:**  
+- Explored the fundamentals of Flash Attention, including its memory-efficient mechanism for attention computation.  
+- Gained insights into optimizing CUDA kernels for operations like softmax and scaling factors used in attention.  
+- Identified potential challenges in achieving numerical stability and correctness when implementing complex attention mechanisms.  
+
+### Reading:  
+- Read the **Flash Attention paper**.  
+  - Learned about the key concepts of reducing memory overhead in attention computation, streamlining the matrix multiplication process, and ensuring efficient scaling for large models.
 
 
 ### Future challenges:
