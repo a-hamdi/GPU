@@ -1,9 +1,11 @@
+%%writefile main.cu
 #include <cuda.h>
 #include <cuda_runtime.h>
 #include <iostream>
 #include <random>
 #include <cmath>
 #include <curand.h> 
+#include <fstream>
 
 
 
@@ -112,7 +114,32 @@ T* allocateAndInitializeDeviceMemory(size_t size, bool initializeToZero = false,
     return device_ptr;
 }
 
+template <typename T>
+void writeMatrixToFile(T* matrix, const std::string& filename, int batch_size, int num_heads, int sequence_length, int embedding_dimension) {
+    std::ofstream file(filename);
+    if (!file) {
+        std::cerr << "Could not open the file!" << std::endl;
+        return;
+    }
 
+    for (int b = 0; b < batch_size; ++b) {
+        for (int h = 0; h < num_heads; ++h) {
+            for (int i = 0; i < sequence_length; ++i) {
+                for (int j = 0; j < embedding_dimension; ++j) {
+                    file << matrix[(b * num_heads * sequence_length * embedding_dimension) +
+                                   (h * sequence_length * embedding_dimension) +
+                                   (i * embedding_dimension) + j];
+                    if (j < embedding_dimension - 1) {
+                        file << ", "; // Comma separation
+                    }
+                }
+                file << std::endl; // New line for next row
+            }
+            file << std::endl; // Extra new line for separating heads
+        }
+    }
+    file.close();
+}
 
 template <typename T>
 void printMatrix(T* matrix, int batch_size, int num_heads, int sequence_length, int embedding_dimension, int rowsToPrint, int colsToPrint) {
@@ -135,14 +162,63 @@ void printMatrix(T* matrix, int batch_size, int num_heads, int sequence_length, 
     }
     delete[] host_matrix;
 }
+/*
+void test_attention(int batch_size, int num_heads, int sequence_length, int embedding_dimension) {
 
 
+    // Generate random tensors for query, key, and value (similar to CUDA initialization)
+    auto query = torch::rand({batch_size, num_heads, sequence_length, embedding_dimension}, device);
+    auto key = torch::rand({batch_size, num_heads, sequence_length, embedding_dimension}, device);
+    auto value = torch::rand({batch_size, num_heads, sequence_length, embedding_dimension}, device);
+
+    // Calculate the softmax scale
+    float softmax_scale = 1.0f / std::sqrt(embedding_dimension);
+
+    // Prepare output and intermediate tensors
+    auto output = torch::zeros({batch_size, num_heads, sequence_length, embedding_dimension}, device);
+    auto sum_matrix = torch::zeros({batch_size, num_heads, sequence_length}, device);
+    auto max_matrix = torch::full({batch_size, num_heads, sequence_length}, -INFINITY, device);
+
+    // Perform attention operation (similar to your CUDA kernel logic)
+    for (int head = 0; head < num_heads; ++head) {
+        for (int seq_idx = 0; seq_idx < sequence_length; ++seq_idx) {
+            // Calculate attention scores
+            auto query_vec = query.index({0, head, seq_idx, torch::indexing::Slice()});
+            auto key_mat = key.index({0, head, torch::indexing::Slice(), torch::indexing::Slice()});
+
+            auto scores = torch::matmul(query_vec.unsqueeze(0), key_mat.transpose(1, 0)) * softmax_scale;
+
+            // Calculate softmax
+            auto max_score = std::get<0>(scores.max(1));
+            auto score_exp = torch::exp(scores - max_score.unsqueeze(1));
+
+            // Normalize
+            auto sum_score = score_exp.sum(1);
+            auto attention_weights = score_exp / (sum_score.unsqueeze(1) + 1e-10);  // Avoid division by zero
+
+            // Compute the output
+            auto value_mat = value.index({0, head, torch::indexing::Slice(), torch::indexing::Slice()});
+            auto weighted_value = torch::matmul(attention_weights.unsqueeze(1), value_mat).squeeze(1);
+            
+            output.index({0, head, seq_idx, torch::indexing::Slice()}) = weighted_value;
+            max_matrix.index({0, head, seq_idx}) = max_score;
+            sum_matrix.index({0, head, seq_idx}) = sum_score;
+        }
+    }
+
+    // Prints to validate outputs
+    std::cout << "Query Tensor:\n" << query << "\n";
+    std::cout << "Key Tensor:\n" << key << "\n";
+    std::cout << "Value Tensor:\n" << value << "\n";
+    std::cout << "Output Tensor:\n" << output << "\n";
+}
+*/
 int main() {
-    // Problem dimensions
+  
     const int batch_size = 1;
     const int num_heads = 1;
-    const int sequence_length = 10;
-    const int embedding_dimension = 10;
+    const int sequence_length = 64;
+    const int embedding_dimension = 64;
 
     
     const int block_size_columns = 32;
@@ -191,7 +267,33 @@ cudaMemset(sum_matrix_device, 0, vector_size);
  
     int rowsToPrint = sequence_length ;
     int colsToPrint = embedding_dimension;
-std::cout << "Q:\n";
+    
+    
+    
+    float* query_matrix_host = new float[batch_size * num_heads * sequence_length * embedding_dimension];
+    float* key_matrix_host = new float[batch_size * num_heads * sequence_length * embedding_dimension];
+    float* value_matrix_host = new float[batch_size * num_heads * sequence_length * embedding_dimension];
+    float* output_matrix_host = new float[batch_size * num_heads * sequence_length * embedding_dimension];
+
+    // Copy matrices from device to host
+    cudaMemcpy(query_matrix_host, query_matrix_device, matrix_size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(key_matrix_host, key_matrix_device, matrix_size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(value_matrix_host, value_matrix_device, matrix_size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(output_matrix_host, output_matrix_device, matrix_size, cudaMemcpyDeviceToHost);
+
+    // Write each matrix to its respective output file
+    writeMatrixToFile(query_matrix_host, "query_output.csv", batch_size, num_heads, sequence_length, embedding_dimension);
+    writeMatrixToFile(key_matrix_host, "key_output.csv", batch_size, num_heads, sequence_length, embedding_dimension);
+    writeMatrixToFile(value_matrix_host, "value_output.csv", batch_size, num_heads, sequence_length, embedding_dimension);
+    writeMatrixToFile(output_matrix_host, "output_output.csv", batch_size, num_heads, sequence_length, embedding_dimension);
+    
+    
+    
+    
+    
+    
+    
+    std::cout << "Q:\n";
     printMatrix(query_matrix_device, batch_size, num_heads, sequence_length, embedding_dimension, rowsToPrint, colsToPrint);
     std::cout << "K:\n";
     printMatrix(key_matrix_device, batch_size, num_heads, sequence_length, embedding_dimension, rowsToPrint, colsToPrint);

@@ -1,19 +1,16 @@
 import torch
 import torch.nn.functional as F
 
-# Define Q, K, V, and expected O matrices (from the main)
-Q = torch.tensor([[0.0853815, 0.250728],
-                  [0.0798073, 0.585853]], dtype=torch.float32)
-
-K = torch.tensor([[0.0853815, 0.250728],
-                  [0.0798073, 0.585853]], dtype=torch.float32)
-
-V = torch.tensor([[0.0853815, 0.250728],
-                  [0.0798073, 0.585853]], dtype=torch.float32)
-
-expected_O = torch.tensor([[2.74403e-08, 2.80995e+37],
-                           [8.29159e+23, 1.72871e-12]], dtype=torch.float32)
-
+# Define Q, K, V, and expected O matrices
+def load_csv_to_tensor(file_path):
+    df = pd.read_csv(file_path, header=None)  # Assuming no header in the CSV
+    tensor = torch.tensor(df.values)  # Convert DataFrame to tensor
+    return tensor
+# Load the matrices
+Q = load_csv_to_tensor('query_output.csv')
+K = load_csv_to_tensor('key_output.csv')
+V = load_csv_to_tensor('value_output.csv')
+expected_O = load_csv_to_tensor('output_output.csv')
 # Step 1: Scaled Dot-Product Attention Calculation
 # Compute the scaled dot-product of Q and K^T
 dk = Q.size(-1)  # Dimension of the embedding (key size)
