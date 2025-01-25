@@ -178,6 +178,14 @@ Implemented a forward pass for Flash Attention in CUDA, based on the Flash Atten
   - Learned about the key concepts of reducing memory overhead in attention computation, streamlining the matrix multiplication process, and ensuring efficient scaling for large models.
 
 
+### Day 10:
+### File: `flash_attention_forward.cu` 
+Optimized and corrected yesterday's forward pass for Flash Attention in CUDA, based on the Flash Attention paper. The code is still a work in progress!
+
+### File: `torch_test.py` 
+Torch code to check the results of flash_attention_forward kernel.
+
+
 ### Future challenges:
 Day 15 - mandatory FA2-forward
 Day 20 - mandatory FA2-bakcwards
