@@ -185,6 +185,8 @@ Optimized and corrected yesterday's forward pass for Flash Attention in CUDA, ba
 ### File: `torch_test.py` 
 Torch code to check the results of flash_attention_forward kernel.
 
+### blog: `Understanding Flash Attention (Forward) with CUDA`
+A blog on flash attention (forward algorithm) explaining the parts of my code. I'll try to make it more intuitive with drawings as soon as I have time.
 
 ### Future challenges:
 Day 15 - mandatory FA2-forward
