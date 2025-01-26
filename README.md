@@ -188,6 +188,33 @@ Torch code to check the results of flash_attention_forward kernel.
 ### Blog: `Understanding Flash Attention (Forward) with CUDA`
 A blog on flash attention (forward algorithm) explaining the parts of my code. I'll try to make it more intuitive with drawings as soon as I have time.
 
+### Day 11
+### File: `sparse_MatrixVecMult_Hybrid_ELL_COO.cu`
+**Summary:**  
+Completed the implementation of a highly optimized sparse matrix-vector multiplication (SpMV) algorithm using a hybrid approach that combines ELL (Ellpack) and COO (Coordinate) formats. This implementation focuses on minimizing memory overhead while maximizing computational efficiency across the sparsity of the input matrix.
+
+**Learned:**  
+- Explored the principles and benefits of different sparse matrix representations, namely ELL and COO formats.
+- Implemented hybrid techniques to optimize performance by balancing memory access patterns and ensuring efficient data locality.
+- Benchmarked the performance of the CUDA implementation against PyTorch to evaluate the efficiency and correctness of the optimized SpMV algorithm.
+
+### Reading:  
+- Completed **Chapter 10** of the PMPP book.  
+  - Gained insights into parallel patterns for sparse matrix computations, focusing on the background of sparse data handling, parallel SpMV using CSR formats, and padding and transposition techniques for optimization.  
+  - Learned about utilizing hybrid approaches to manage padding effectively and methods for sorting and partitioning to enhance regularization in sparse data.
+
+### File: `benchmark.py`
+**Summary:**  
+Developed a benchmarking script to evaluate the performance of the custom CUDA SpMV implementation against PyTorch's built-in functions. This benchmark facilitates comparative analysis of execution times and ensures that the implementation meets expected performance standards.
+
+### Blog:  
+- Wrote a blog post titled **"Learning CUDA with a Weak GPU or No GPU at All: Yes, You Can!"**  
+  - Addressed common misconceptions regarding GPU programming and provided practical tips for learners with limited hardware resources. The blog offers insights on optimizing CPU-based implementations and highlights methods to learn CUDA fundamentals without direct access to a powerful GPU.
+
+**Link to Blog:**  
+[Learning CUDA with a Weak GPU or No GPU at All: Yes, You Can!](https://hamdi.bearblog.dev/learning-cuda-with-a-weak-gpu-or-no-gpu-at-all-yes-you-can/)
+
+
 ### Future challenges:
 Day 15 - mandatory FA2-forward
 Day 20 - mandatory FA2-bakcwards
