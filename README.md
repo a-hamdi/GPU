@@ -214,6 +214,27 @@ Developed a benchmarking script to evaluate the performance of the custom CUDA S
 **Link to Blog:**  
 [Learning CUDA with a Weak GPU or No GPU at All: Yes, You Can!](https://hamdi.bearblog.dev/learning-cuda-with-a-weak-gpu-or-no-gpu-at-all-yes-you-can/)
 
+## Day 12
+### File: `merge_sort.cu`
+**Summary:**  
+Implemented the Merge Sort algorithm using CUDA. The implementation focuses on merging two sorted arrays into a single sorted array using a parallel approach. The kernel utilizes a co-rank function to find positions in the combined array for inserting elements from the two sorted input arrays efficiently.  
+
+**Learned:**  
+- Explored the fundamentals of merge sort and its parallelization strategies.
+- Implemented the co-rank function which assists in finding the correct position of elements while merging two sorted arrays.
+- Developed a parallel merge kernel that utilizes the GPU's capabilities for concurrent execution, enhancing performance beyond a sequential merge approach.
+
+
+### Reading:
+- Read **Chapter 11** of the PMPP book.  
+  - Covered various aspects of merge sort parallel pattern. Key sections included:
+    - **Background**: Understanding the merge sort algorithm and its significance in parallel processing.
+    - **Sequential Merge Algorithm**: Key insights into how merge operations are typically conducted sequentially.
+    - **Parallelization Approach**: Strategies for achieving parallelism in merge sort, highlighting the expected performance benefits.
+    - **Co-Rank Function Implementation**: Understanding how the co-rank function is used to determine merging positions effectively.
+    - **Basic and Tiled Merge Kernel**: Learning about different kernel designs including basic parallel merge kernels and more advanced tiled merge techniques for optimizing data access patterns.
+
+
 
 ### Future challenges:
 Day 15 - mandatory FA2-forward
