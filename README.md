@@ -236,11 +236,11 @@ Implemented the Merge Sort algorithm using CUDA. The implementation focuses on m
 
 
 ## Day 13
-I coded a Breadth first search optimized kernel, check this for more details: [day 13](./day%2013/Bfs/README.md) .
+I coded a Breadth first search optimized kernel, check this for more details: [BFS](./day%2013/Bfs/README.md) .
 
-I also coded  Gelu activation kernel, check this for more details: [day 13](./day%2013/Gelu/README.md) .
+I also coded  Gelu activation kernel, check this for more details: [Gelu](./day%2013/Gelu/README.md) .
 
-And also coded a full linear layer that treats batches using cublas: [day 13](./day%2013/Linear_kernel/README.md) .
+And also coded a full linear layer that treats batches using cublas: [Linear_kernel](./day%2013/Linear_kernel/README.md) .
 
 ---
 
