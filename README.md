@@ -235,6 +235,56 @@ Implemented the Merge Sort algorithm using CUDA. The implementation focuses on m
     - **Basic and Tiled Merge Kernel**: Learning about different kernel designs including basic parallel merge kernels and more advanced tiled merge techniques for optimizing data access patterns.
 
 
+## Day 13
+
+### File: `bfs.h`
+**Summary:**  
+Created a header file for the Parallelized Breadth-First Search (BFS) project. This file includes essential macros, function declarations, and utility functions to facilitate the implementation of the BFS algorithm on the GPU.  
+
+---
+
+### File: `bfs_kernel.cu`
+**Summary:**  
+Implemented the CUDA kernel for parallel BFS in the `bfs_kernel.cu` file. The kernel utilizes atomic operations to ensure thread-safe updates to labels, enabling multiple threads to explore graph edges concurrently.  
+
+**Learned:**  
+- How to design a CUDA kernel for graph traversal using parallelization strategies.
+- Used `atomicCAS` to manage concurrent access to shared label data, preventing data races.
+- The concept of marking nodes at each BFS level and how to signal completion of traversal via atomic flags.
+
+---
+
+### File: `bfs_gpu.cu`
+**Summary:**  
+Developed the main GPU function `bfs_gpu` that integrates the graph traversal functionality, orchestrating the initialization of kernel launches and memory management for the BFS operation.  
+
+**Learned:**  
+- How to manage kernel launches based on the graph size and structure.
+- Strategies for handling the BFS frontier and updating labels.
+
+---
+
+### File: `bfs_cpu.c`
+**Summary:**  
+Completed implementations for the CPU BFS version and a random graph generator. This aids in testing the correctness of the GPU BFS by providing a reliable CPU counterpart for comparison.  
+
+---
+
+### Reading:
+- Read **Chapter 12** of the PMPP book.  
+  - Explored parallel patterns for graph searches, covering:
+    - Background on graph structures and traversal mechanisms.
+    - Detailed sections on implementing both sequential and parallel BFS functions.
+    - Insights into optimizing graph traversal performance, including memory bandwidth considerations and load balancing strategies in parallel algorithms.
+
+---
+
+### Future Plans:
+- Optimize the BFS implementation using hierarchical queues for better memory usage and performance.
+- Explore additional enhancements and optimizations discussed in Chapter 12 to refine the BFS algorithm further.
+- Prepare a performance comparison between CPU and GPU implementations in the subsequent days.
+
+
 
 ### Future challenges:
 Day 15 - mandatory FA2-forward
