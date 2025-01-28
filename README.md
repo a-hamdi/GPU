@@ -240,7 +240,7 @@ I coded a Breadth first search optimized kernel, check this for more details: [B
 
 I also coded  Gelu activation kernel, check this for more details: [Gelu](./day%2013/Gelu/README.md) .
 
-And also coded a full linear layer that treats batches using cublas: [Linear_kernel](./day%2013/Linear_kernel/README.md) .
+And also coded a full linear layer that treats batches using cublas: [Linear_kernel](./"day 13"/Glu/README.md) .
 
 ---
 
