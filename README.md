@@ -277,12 +277,12 @@ Completed implementations for the CPU BFS version and a random graph generator. 
     - Detailed sections on implementing both sequential and parallel BFS functions.
     - Insights into optimizing graph traversal performance, including memory bandwidth considerations and load balancing strategies in parallel algorithms.
 - Read **Chapter 13** of the PMPP book.
-  -Learned about the fundamentals of CUDA Dynamic Parallelism, including:
-    -The basics and overview of dynamic parallelism in CUDA.
-    -How memory visibility works, especially in the context of different memory types (global, shared, local).
-    -Memory management strategies and the impact of nesting depth on kernel launches.
-    -Synchronization techniques, streams, and events for managing concurrent operations within dynamic kernels.
-    -Studied a more complex example about Bezier curve calculations both with and without dynamic parallelism, enhancing my understanding of recursive  
+  - Learned about the fundamentals of CUDA Dynamic Parallelism, including:
+    - The basics and overview of dynamic parallelism in CUDA.
+    - How memory visibility works, especially in the context of different memory types (global, shared, local).
+    - Memory management strategies and the impact of nesting depth on kernel launches.
+    - Synchronization techniques, streams, and events for managing concurrent operations within dynamic kernels.
+    - Studied a more complex example about Bezier curve calculations both with and without dynamic parallelism, enhancing my understanding of recursive  
 ---
 
 ### Future Plans:
