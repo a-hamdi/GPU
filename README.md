@@ -264,9 +264,38 @@ And also coded a full linear layer that treats batches using cublas: [Linear_ker
 - Explore additional enhancements and optimizations discussed in Chapter 12 to refine the BFS algorithm further.
 - Prepare a performance comparison between CPU and GPU implementations in the subsequent days.
 
+## Day 14
+
+### File: `cmpFHD.cu`
+**Summary:**  
+Implemented the FHD (Fully-Hybrid Domain) algorithm for non-Cartesian magnetic resonance imaging (MRI) reconstruction in CUDA. The code focuses on optimizing the parallelism structure to handle iterative reconstruction efficiently, aiming to balance computational load while reducing memory footprint.
+
+**Learned:**  
+- Gained insights into non-Cartesian MRI imaging techniques and their relevance in modern medical imaging applications.
+- Developed an understanding of iterative reconstruction methods and how parallelization can significantly improve performance in reconstructing images from non-Cartesian data.
+- Implemented optimizations to address common challenges in MRI reconstruction, such as memory bandwidth limitations and computational heavy-lifting.
+
+### File: `cmpFHD_real_image.cu`
+**Summary:**  
+Built upon the previous implementation of the FHD algorithm to include real image reading and processing capabilities. This version takes an actual image, applies the FHD reconstruction algorithm, and outputs the reconstructed image, demonstrating practical applicability of the CUDA code.
+
+**Learned:**  
+- Expanded the previous understanding of memory management and kernel optimization by integrating real-world data processing into the workflow.
+- Familiarized myself with image I/O operations in CUDA, allowing for the handling of real data as input for reconstruction algorithms.
+
+
+### Reading:
+- Completed **Chapter 14** of the PMPP book.  
+  - Delved into the case study of non-Cartesian magnetic resonance imaging, which provided:
+    - Background on the principles and necessities driving advancements in MRI technology.
+    - A comprehensive look at iterative reconstruction techniques that enhance image quality using statistical estimation methods.
+    - Detailed steps on optimizing the kernel parallelism structure to maximize performance and minimize memory constraints in handling MRI data.
+    - Insights into experimental performance tuning, particularly the advantages of leveraging hardware trigonometry functions to achieve rapid computations.
+
+---
 
 
 ### Future challenges:
-Day 15 - mandatory FA2-forward
-Day 20 - mandatory FA2-bakcwards
-Day 20 - optional fused chunked CE loss + backwards. we can use Liger Kernel as reference implementation to copy. 
+- Day 15 - mandatory FA2-forward
+- Day 20 - mandatory FA2-bakcwards
+- Day 20 - optional fused chunked CE loss + backwards. we can use Liger Kernel as reference implementation to copy. 
