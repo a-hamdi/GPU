@@ -295,6 +295,48 @@ Built upon the previous implementation of the FHD algorithm to include real imag
 ---
 
 
+### Day 15
+
+#### File: `flash_attention_backprop.cu`
+**Summary:**  
+Implemented the backpropagation for Flash Attention in CUDA, continuing from the forward pass developed earlier. The backpropagation step computes the gradients required for training the attention mechanism. However, a small issue arose where some of the gradients are outputting as zero at certain points, which will be addressed and fixed in the coming days.
+
+**Learned:**  
+- Explored the process of backpropagation in the context of Flash Attention, including the calculation of gradients for the attention weights and input matrices.
+- Worked on integrating gradient calculation with memory optimization techniques to maintain efficiency, consistent with the original forward pass.
+- Identified potential issues related to numerical stability when dealing with gradient flow in CUDA, specifically in the attention layer.
+
+---
+
+#### File: `cnn.cu`
+**Summary:**  
+Developed a Convolutional Neural Network (CNN) implementation in CUDA, including both forward and backward passes with pooling layers. Used the unrolling trick for improved performance in the backward pass, optimizing the matrix operations involved.
+
+**Learned:**  
+- Implemented the core components of a CNN in CUDA, including convolutions, activations, pooling layers, and backpropagation.
+- Utilized the unrolling trick to optimize it, improving the performance of matrix multiplications and gradient calculations.
+- Gained deeper understanding of the computational requirements for CNN training on GPUs and the importance of efficient memory access patterns and parallelism in deep learning.
+
+---
+
+### Reading:  
+- **Chapter 15:** *Application Case Study—Molecular Visualization and Analysis*  
+  - Delved into the background and practical aspects of molecular visualization in parallel computing.  
+  - Learned about the importance of thread granularity adjustments and memory coalescing in visualizing large-scale molecular structures using CUDA.
+
+- **Chapter 16:** *Application Case Study—Machine Learning*  
+  - Focused on Convolutional Neural Networks (ConvNets) and their implementation in CUDA.  
+  - Covered key concepts such as basic layers, backpropagation, and the reduction of convolutional layers to matrix multiplication for optimization.  
+  - Explored the cuDNN library and its use in accelerating deep learning operations.
+
+- **Chapter 17:** *Parallel Programming and Computational Thinking*  
+  - Studied the core principles of parallel computing, including problem decomposition, algorithm selection, and computational thinking.  
+  - Focused on strategies for optimizing memory locality and shared memory usage in parallel applications.
+
+---
+
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
 - Day 20 - mandatory FA2-bakcwards
