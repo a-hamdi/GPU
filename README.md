@@ -334,6 +334,36 @@ Developed a Convolutional Neural Network (CNN) implementation in CUDA, including
   - Focused on strategies for optimizing memory locality and shared memory usage in parallel applications.
 
 ---
+### Day 16
+
+#### Code: `NaiveBayes.cu`, `NaiveBayesKernel.cuh`, `NaiveBayesTrain.cuh`, `NaiveBayesTrain.cpp`, and `main.cpp`
+**Summary:**  
+Implemented a CUDA-accelerated Naive Bayes classifier, focusing on the training and inference stages. Leveraging shared memory to maximize computational efficiency, the implementation is structured to divide work among threads for parallelized data processing of feature probabilities.
+
+**Components Developed:**  
+1. **`NaiveBayes.cu`**:  
+   - This file contains the CUDA kernel responsible for calculating feature likelihoods and class probabilities in parallel. Shared memory was used where possible to minimize global memory access penalties.
+   - Optimized kernel launches to balance between grid and block dimensions for datasets with high dimensionality. 
+   
+2. **`NaiveBayesKernel.cuh`**:  
+   - Header file declaring the kernel functions, ensuring modularity and separation of concerns in code structure.    
+
+3. **`NaiveBayesTrain.cuh`**:  
+   - Declared the host-side training function, encapsulating the logic to copy data to the GPU, launch CUDA kernels, and retrieve results.  
+
+4. **`NaiveBayesTrain.cpp`**:  
+   - Implemented the host-side training process, providing pre-processing for input data and managing memory transfers between CPU and GPU.
+  
+5. **`main.cpp`**:  
+   - Entry point of the program, performing tasks like loading data, splitting datasets for training and testing, and evaluating model performance after training.  
+
+---
+
+#### Blog Update  
+- Updated My blog with an important information about using NVCC in Colab. 
+  - Link: [Learning CUDA with a Weak GPU (or No GPU at All)](https://hamdi.bearblog.dev/learning-cuda-with-a-weak-gpu-or-no-gpu-at-all-yes-you-can/)
+
+---
 
 
 
