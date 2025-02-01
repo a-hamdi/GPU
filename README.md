@@ -365,6 +365,30 @@ Implemented a CUDA-accelerated Naive Bayes classifier, focusing on the training 
 
 ---
 
+### Day 17
+
+#### Code: `vec_cublas.cu`
+**Summary:**  
+Today, I implemented vector addition using the cuBLAS library in CUDA. By leveraging the optimized linear algebra routines provided by cuBLAS, this implementation achieves highly efficient computation of the vector addition operation `C = A + B` for two input vectors `A` and `B`. The addition was performed using the `cublasSaxpy` function, which computes scaled vector addition.
+
+**Key Concepts Implemented:**  
+- Used the `cublasSaxpy` function to perform the vector addition in the format `C = alpha * A + B` where `alpha` is a scaling factor. In this case, `alpha` was set to `1.0` to achieve the simple addition of `A` and `B`.
+- Managed the cuBLAS library handle for the operation.
+
+---
+
+**Learned:**  
+- **cuBLAS Basics:**  
+  - Gained an introduction to the cuBLAS library and its capabilities for high-performance linear algebra operations.  
+  - Learned how to use cuBLAS functions like `cublasSaxpy` for vector addition and understood its parameters.  
+
+- **cuBLAS Handle Management:**  
+  - Understood how to create and destroy a cuBLAS handle using `cublasCreate` and `cublasDestroy`. This is critical for managing state across cuBLAS calls.
+
+- **Functionality of `cublasSaxpy`:**  
+  - Reviewed the underlying algorithm and implementation of the AXPY operation, which computes `y = a*x + y` for real vectors `x` and `y` and scalar `a`.
+
+---
 
 
 ### Future challenges:
