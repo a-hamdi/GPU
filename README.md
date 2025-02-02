@@ -391,6 +391,25 @@ Today, I implemented vector addition using the cuBLAS library in CUDA. By levera
 ---
 
 
+## Day 18
+
+### File: `MutMul_cublas.cu`
+**Summary:**  
+Implemented a matrix multiplication algorithm using the cuBLAS library, which is optimized for CUDA-capable GPUs. This involved utilizing high-performance BLAS (Basic Linear Algebra Subprograms) routines for efficient computation of matrix products. The cuBLAS library abstracts much of the complexity involved in parallel programming for matrix operations, allowing for better performance due to its efficient use of memory and computations optimized for the hardware.
+
+---
+
+### Reading:  
+- Completed **Chapter 18** of the PMPP book: 
+  - Programming a Heterogeneous Computing Cluster
+- Completed **Chapter 19** of the PMPP book:
+  - Parallel Programming with OpenACC 
+- Completed **Chapter 20** of the PMPP book:
+  - More on CUDA and Graphics Processing Unit Computing
+- Completed **Chapter 21** of the PMPP book:
+  - Programming a Heterogeneous Computing Cluster
+- Explored **Appendix A** (Introduction to OpenCL) and **Appendix B** (THRUST), **Appendix C**: CUDA Fortran, **Appendix D**: An introduction to C++ AMP 
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
 - Day 20 - mandatory FA2-bakcwards
