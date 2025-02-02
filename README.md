@@ -8,6 +8,8 @@ Mentor: https://github.com/hkproj/
 Bro in the 100 days challenge: https://github.com/1y33/100Days
 
 
+Check out my blog: https://hamdi.bearblog.dev/
+
 ---
 
 ## Day 1
