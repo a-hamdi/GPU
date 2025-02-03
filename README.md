@@ -412,6 +412,30 @@ Implemented a matrix multiplication algorithm using the cuBLAS library, which is
   - Programming a Heterogeneous Computing Cluster
 - Explored **Appendix A** (Introduction to OpenCL) and **Appendix B** (THRUST), **Appendix C**: CUDA Fortran, **Appendix D**: An introduction to C++ AMP 
 
+---
+
+## Day 19
+
+### File: `fcnet.cu`
+**Summary:**  
+Implemented a fully connected neural network (FCNet) using cuDNN in a CUDA program. This program utilizes the cuDNN library to perform forward passes through the network. The network consists of three layers: an input layer, two hidden layers, and an output layer. Each layer applies convolution, activation functions (ReLU), and includes bias terms.
+
+**Learned:**  
+- How to leverage cuDNN to construct and optimize neural networks effectively on the GPU.
+- Understanding of tensor descriptors, filter descriptors, and convolution descriptors, which are essential for defining the structure of the network.
+- The process for initializing weights using the cuRAND library to generate random numbers for model training.
+- Execution of the forward pass through the network with proper handling of data types, memory allocations, and error checking.
+- Importance of initializing and cleaning up CUDA and cuDNN resources to prevent memory leaks.
+
+### Code Overview:
+- Used `cudnnCreate`, `cudnnSetTensor4dDescriptor`, and related functions to define the structure of inputs, outputs, and weights.
+- Utilized convolution and activation layers to mimic the behavior of a feedforward neural network.
+- Implemented error checking macros (`CHECK_CUDA`, `CHECK_CUDNN`) to facilitate debugging of CUDA and cuDNN calls.
+- Conducted a simple forward training loop to process data; generated dummy input and label data for testing purposes.
+
+---
+
+By documenting these details, you'll have a comprehensive overview of your work on Day 19, showcasing your progress in using CUDA and cuDNN for building neural networks.
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
 - Day 20 - mandatory FA2-bakcwards
