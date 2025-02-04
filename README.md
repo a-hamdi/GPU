@@ -435,7 +435,18 @@ Implemented a fully connected neural network (FCNet) using cuDNN in a CUDA progr
 
 ---
 
-By documenting these details, you'll have a comprehensive overview of your work on Day 19, showcasing your progress in using CUDA and cuDNN for building neural networks.
+
+## Day 20
+
+### File: `rope.cu`
+**Summary:**  
+Implemented the Rotary Positional Encoding (RoPE) mechanism in CUDA for enhancing transformer models. RoPE is designed to introduce the notion of position into token representations, allowing the model to effectively capture the sequential nature of the input data without the limitations of traditional positional encodings.
+
+### Reading:
+- Continued exploring additional literature on data structures suitable for parallel computing, focusing on the use cases and performance implications of rope data structures in practical applications.
+
+--- 
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
 - Day 20 - mandatory FA2-bakcwards

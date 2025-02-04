@@ -1,4 +1,4 @@
-// nvcc -o fcnet fcnet.cu -lcudnn -lcublas -lcurand
+// use this command: nvcc -o fcnet fcnet.cu -lcudnn -lcublas -lcurand
 
 #include <cudnn.h>
 #include <cuda_runtime.h>
