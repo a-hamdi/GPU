@@ -446,6 +446,34 @@ Implemented the Rotary Positional Encoding (RoPE) mechanism in CUDA for enhancin
 - Continued exploring additional literature on data structures suitable for parallel computing, focusing on the use cases and performance implications of rope data structures in practical applications.
 
 --- 
+## Day 21
+
+### File: `cuda_sgc.cu`
+**Summary:**  
+Implemented a Stochastic Gradient Descent (SGD) algorithm in CUDA, focusing on optimizing calculations via shared memory and other performance tricks. This implementation is designed for linear regression, consisting of weight and bias updates, where the effectiveness of using CUDA's parallel computation capabilities significantly enhances the training speed.
+
+**Key Components:**
+1. **Compute Loss:**  
+   - The kernel `compute_loss` calculates the predictions and corresponding squared loss for each data point. The predictions are calculated using an input matrix `X`, weights `W`, and bias `b`.
+
+2. **Compute Gradients:**  
+   - The `compute_gradients` kernel computes the gradients of the loss with respect to weights and bias. It uses shared memory (`db_shared`) for the computation of bias gradients, reducing global memory access and improving performance.
+
+3. **Update Weights:**  
+   - The `update_weights` kernel updates the weights and bias based on the calculated gradients and the learning rate.
+
+4. **Training Function:**  
+   - `train_sgd` orchestrates the memory management, kernel launches, and data transfers between host and device for the entire training loop over a specified number of epochs.
+
+---
+
+
+### Reading:
+- Continued the exploration of optimization techniques for CUDA applications, focusing on strategies for improving kernel performance and reducing latency.
+- Reviewed literature on best practices for applying SGD and other optimization algorithms in machine learning frameworks, considering both theoretical and practical aspects.
+
+--- 
+
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
