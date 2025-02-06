@@ -474,6 +474,30 @@ Implemented a Stochastic Gradient Descent (SGD) algorithm in CUDA, focusing on o
 
 --- 
 
+## Day 22
+
+### File: `EM_kernel.cu`
+**Summary:**  
+Developed the Expectation-Maximization (EM) algorithm in CUDA for clustering 1D data into a specified number of clusters. The implementation includes E-step and M-step kernels to maximize the expected likelihood function iteratively.
+
+**Key Components:**
+- **E-step Kernel (`eStepKernel`):**  
+  Calculates the responsibilities (probabilities) of each data point belonging to each cluster based on current parameters (means, standard deviations, mixing coefficients).
+  
+- **M-step Kernel (`mStepKernel`):**  
+  Updates the parameters for each cluster (mean, variance, and mixing coefficients) based on the responsibilities calculated in the E-step.
+
+**Learnings:**  
+- Gained practical experience with CUDA memory management, including data allocation and copying between host and device.  
+- Understood how to implement parallel reduction using atomic operations for accumulating sums across threads in the M-step phase.  
+- Familiarized with Gaussian mixture modeling concepts and the iterative nature of the EM algorithm, enhancing the ability to cluster data points effectively.
+
+---
+
+### Reading:
+- Reviewed relevant literature on Gaussian Mixture Models and the EM algorithm's applications in various domains, including image processing and statistical analysis.  
+
+--- 
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward
