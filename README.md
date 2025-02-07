@@ -498,8 +498,29 @@ Developed the Expectation-Maximization (EM) algorithm in CUDA for clustering 1D 
 - Reviewed relevant literature on Gaussian Mixture Models and the EM algorithm's applications in various domains, including image processing and statistical analysis.  
 
 --- 
+## Day 23
+
+### File: `swiglu.cu`
+**Summary:**  
+Implemented the SwiGLU (Swish-Gated Linear Unit) activation function in CUDA. This kernel computes the activation function in a parallelized manner, enhancing the performance of neural network models that utilize the SwiGLU activation. The implementation focuses on efficient computation and memory access patterns to optimize performance on CUDA-capable GPUs.
+
+**Key Components:**
+1. **Kernel Function:**  
+   - The `swiglu_kernel` computes the SwiGLU output by first performing matrix multiplications with weight matrices `W1` and `W2`, followed by applying the sigmoid function to the results. This approach allows the kernel to compute the outputs for multiple batches and dimensions concurrently.
+
+2. **Memory Management:**  
+   - Memory allocation and deallocation on the GPU are managed using `cudaMalloc` and `cudaFree`, ensuring efficient usage of GPU resources. Input matrices are copied to the device memory using `cudaMemcpy`.
+
+3. **Debugging Information:**  
+   - Added debugging print statements within the GPU kernel to help verify correctness for the initial output values. This assists in tracking computations and identifying potential issues during development.
+
+4. **Manual Verification:**  
+   - Performed manual computations for the first output element on the CPU to verify the correctness of the CUDA implementation against expectations, ensuring the output matches the sequential computation results.
+
+
+---
+
 
 ### Future challenges:
-- Day 15 - mandatory FA2-forward
-- Day 20 - mandatory FA2-bakcwards
-- Day 20 - optional fused chunked CE loss + backwards. we can use Liger Kernel as reference implementation to copy. 
+- Day 15 - mandatory FA2-forward   (Done)
+- Day 20 - mandatory FA2-bakcwards (Done)
