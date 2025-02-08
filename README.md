@@ -519,6 +519,14 @@ Implemented the SwiGLU (Swish-Gated Linear Unit) activation function in CUDA. Th
 
 
 ---
+## Day 24
+
+### File: `atomicAddLL.cu`
+
+**Summary:**  
+Implemented and tested a custom atomic addition (`atomicAddLL`) function for 64-bit integers (long long) in CUDA. This implementation leverages the `atomicCAS` (compare-and-swap) operation to ensure thread safety when multiple threads attempt to update the same memory location concurrently. The kernel accumulates thread indices into a shared `long long` variable using the `atomicAddLL` function.
+
+---
 
 
 ### Future challenges:
