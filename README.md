@@ -528,7 +528,14 @@ Implemented and tested a custom atomic addition (`atomicAddLL`) function for 64-
 
 ---
 
+## Day 25
 
+### File: `MCTS.cu`
+
+**Summary:**  
+Implemented a parallelized version of Monte Carlo Tree Search (MCTS) using CUDA. The goal was to accelerate the rollout phase of MCTS by leveraging GPU parallelism. The implementation includes a simple game state structure, a rollout function, and a CUDA kernel to perform multiple simulations in parallel.
+
+---
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
