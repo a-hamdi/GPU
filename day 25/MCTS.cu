@@ -6,16 +6,16 @@
 #define NUM_SIMULATIONS 1024  // Number of rollouts
 #define MAX_DEPTH 100         // Maximum rollout depth
 
-// Define the game state (replace with Risk-specific state)
+// Define the game state 
 struct GameState {
-    int moves[10];  // Example move list (replace with actual move structure)
+    int moves[10];  
     int num_moves;
     bool is_terminal;
     float reward;  // Reward if terminal
 
     __device__ GameState next_state(int action) {
         GameState new_state = *this;
-        // Apply the action (modify accordingly)
+        // Apply the action 
         new_state.reward += (action % 2 == 0) ? 1.0f : -1.0f;
         new_state.is_terminal = (new_state.reward > 10 || new_state.reward < -10);
         return new_state;
