@@ -536,6 +536,12 @@ Implemented and tested a custom atomic addition (`atomicAddLL`) function for 64-
 Implemented a parallelized version of Monte Carlo Tree Search (MCTS) using CUDA. The goal was to accelerate the rollout phase of MCTS by leveraging GPU parallelism. The implementation includes a simple game state structure, a rollout function, and a CUDA kernel to perform multiple simulations in parallel.
 
 ---
+## Day 26
+### File: hl_gauss.cu
+**Summary:**  
+I implemented a CUDA-based Gaussian Histogram Loss (HL-Gauss), which computes probabilities for a histogram-based representation of data using the Gaussian kernel's cumulative distribution function. The implementation makes use of massively parallel computation on the GPU to efficiently handle large datasets. This approach is particularly useful in reinforcement learning, as outlined by work from DeepMind and related research papers.
+
+---
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
