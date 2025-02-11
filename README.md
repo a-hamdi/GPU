@@ -537,11 +537,25 @@ Implemented a parallelized version of Monte Carlo Tree Search (MCTS) using CUDA.
 
 ---
 ## Day 26
+
 ### File: hl_gauss.cu
+
 **Summary:**  
 I implemented a CUDA-based Gaussian Histogram Loss (HL-Gauss), which computes probabilities for a histogram-based representation of data using the Gaussian kernel's cumulative distribution function. The implementation makes use of massively parallel computation on the GPU to efficiently handle large datasets. This approach is particularly useful in reinforcement learning, as outlined by work from DeepMind and related research papers.
 
 ---
+
+## Day 27
+
+### File: mirror_d.cu
+
+**Summary:**  
+Implemented a Mirror Descent algorithm in CUDA, which applies different mirror maps to optimize gradient-based updates efficiently. 
+Mirror Descent is a generalization of gradient descent that allows updates in a transformed space, making it effective for constrained optimization problems.
+
+---
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
