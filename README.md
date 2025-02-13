@@ -562,11 +562,12 @@ Mirror Descent is a generalization of gradient descent that allows updates in a 
 This CUDA implementation simulates the time evolution of a quantum wavefunction using the finite difference method. The program calculates the wavefunction's evolution based on the time-dependent Schrödinger equation in a harmonic potential. 
 
 ---
-## Day 28
+## Day 29
 
 ### File: `Cuda_graphs.cu`
 
 **Summary:** 
+
 This CUDA program performs a series of matrix operations using GPU acceleration, demonstrating the use of CUDA kernels for matrix addition, scaling, squaring, and offsetting while measuring performance with and without CUDA Graphs. It includes element-wise matrix addition, scalar multiplication, squaring of elements, and offset addition. The program also compares execution time using traditional CUDA execution versus CUDA Graphs, leveraging CUDA streams and events for optimized performance measurement. Finally, it verifies correctness by comparing GPU-computed results with CPU-verified results.
 
 For more details check :[Cuda_graphs](./day%2029/README.md)
