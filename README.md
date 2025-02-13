@@ -569,7 +569,9 @@ This CUDA implementation simulates the time evolution of a quantum wavefunction 
 **Summary:** 
 
 This CUDA program performs a series of matrix operations using GPU acceleration, demonstrating the use of CUDA kernels for matrix addition, scaling, squaring, and offsetting while measuring performance with and without CUDA Graphs. It includes element-wise matrix addition, scalar multiplication, squaring of elements, and offset addition. The program also compares execution time using traditional CUDA execution versus CUDA Graphs, leveraging CUDA streams and events for optimized performance measurement. Finally, it verifies correctness by comparing GPU-computed results with CPU-verified results.
+
 For more details check :[Cuda_graphs](./day%2029/README.md)
+
 
 ---
 ### Future challenges:
