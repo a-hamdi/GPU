@@ -571,7 +571,31 @@ This CUDA implementation simulates the time evolution of a quantum wavefunction 
 This CUDA program performs a series of matrix operations using GPU acceleration, demonstrating the use of CUDA kernels for matrix addition, scaling, squaring, and offsetting while measuring performance with and without CUDA Graphs. It includes element-wise matrix addition, scalar multiplication, squaring of elements, and offset addition. The program also compares execution time using traditional CUDA execution versus CUDA Graphs, leveraging CUDA streams and events for optimized performance measurement. Finally, it verifies correctness by comparing GPU-computed results with CPU-verified results.
 
 For more details check :[Cuda_graphs](./day%2029/README.md)
+-
+## Day 30
 
+This is a special day as it marks one month of coding GPU kernels daily!
+During this time, I have implemented various kernels supporting AMD GPUs, including:
+
+- Vector Addition
+- Vector-Matrix Multiplication
+- GELU Activation
+- Layer Normalization
+- Matrix Transpose
+- 2D Convolution
+- Flash Attention
+- Prefix Sum
+- Partial Sum
+- Parallel Merge
+- Sparse Matrix-Vector Multiplication
+- ROPE (Rotary Position Embedding)
+- Matrix Addition
+- rocBLAS Vector Operations
+- rocBLAS Matrix Multiplication
+
+Compiled and test on AMD MI250 - 128 Cores/Node + 1TB, 14 CPUs
+
+I made a blog for this special day : https://hamdi.bearblog.dev/my-one-month-journey-into-gpu-programming/
 
 ---
 ### Future challenges:
