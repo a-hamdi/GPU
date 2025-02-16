@@ -598,6 +598,49 @@ Compiled and test on AMD MI250 - 128 Cores/Node + 1TB, 14 CPUs
 I made a blog for this special day : https://hamdi.bearblog.dev/my-one-month-journey-into-gpu-programming/
 
 ---
+
+# Day 31
+
+### File: `game_of_life.cu`
+
+**Summary:**  
+Implemented a parallel version of Conway's Game of Life using CUDA, utilizing shared memory for efficient computation. This program simulates one iteration of the Game of Life on a 2D grid, where each cell can be alive (1) or dead (0). The simulation applies rules based on the number of live neighbors each cell has, encapsulated within a CUDA kernel for optimized performance.
+
+
+### Game of Life Rules Implemented:
+- A live cell with two or three live neighbors stays alive.
+- A dead cell with exactly three live neighbors becomes alive.
+- All other cells die or remain dead.
+
+--- 
+
+## Day 32
+### File: `sgemm.cpp`, `sgemm.h`, `kernel3_registers.cpp`, `kernel3_registers.h`
+**Summary:**  
+Implemented and optimized SGEMM (Single-precision General Matrix Multiplication) for AMD GPUs with register tiling. The implementation achieved impressive performance metrics, particularly for small matrix sizes.
+
+**Performance Highlights:**
+- Exceptional performance for small matrices (N=1024):
+  - Custom implementation: 2029.76 GFLOPS
+  - ~49x faster than rocBLAS for small matrices
+- Competitive performance for medium/large matrices:
+  - Up to 18565.31 GFLOPS at N=4096
+  - Efficient scaling up to 4096x4096 matrices
+
+**Learned:**
+- Optimization techniques for matrix multiplication on AMD GPUs
+- Register-level optimizations for improved performance
+- Trade-offs between custom implementations and vendor libraries
+- Performance scaling characteristics across different matrix sizes
+
+### Reading:
+- Analyzed benchmark results comparing custom SGEMM implementation with rocBLAS
+- Studied performance characteristics and scaling patterns for different matrix sizes
+- Following this article: https://seb-v.github.io/optimization/update/2025/01/20/Fast-GPU-Matrix-multiplication.html
+--- 
+
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
