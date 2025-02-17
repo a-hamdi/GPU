@@ -639,6 +639,60 @@ Implemented and optimized SGEMM (Single-precision General Matrix Multiplication)
 - Following this article: https://seb-v.github.io/optimization/update/2025/01/20/Fast-GPU-Matrix-multiplication.html
 --- 
 
+## Day 33
+### Files: `sparse_gemm.cpp`, `strassen.cpp`, `winograd.cpp`, `utils.cpp`
+**Summary:**  
+Implemented and compared different matrix multiplication algorithms for both dense and sparse matrices using HIP/ROCm in AMD gpus. The comparison included:
+
+1. Dense Matrix Algorithms:
+   - rocBLAS (vendor-optimized library)
+   - Winograd's algorithm
+   - Strassen's algorithm 
+
+2. Sparse Matrix Algorithms:
+   - rocSPARSE (vendor-optimized library)
+   - CSR (Compressed Sparse Row)
+   - COO (Coordinate format)
+   - Block-CSR (Block Compressed Sparse Row)
+
+**Benchmark Results:**  
+Dense Matrix Multiplication (N=256):
+- rocBLAS: 0.75 GFLOPS
+- Winograd: 2279.51 GFLOPS 
+
+Dense Matrix Multiplication (N=512):
+- rocBLAS: 3232.60 GFLOPS
+- Winograd: 52428.80 GFLOPS 
+
+Sparse Matrix Multiplication (N=256, density=0.1) :
+- rocBLAS: 842.23 GFLOPS
+- rocSPARSE: 0.07 GFLOPS
+- CSR: 633.50 GFLOPS
+- COO: 655.30 GFLOPS
+- Block-CSR: 819.20 GFLOPS
+
+Sparse Matrix Multiplication (N=512, density=0.1):
+- rocBLAS: 4042.70 GFLOPS
+- rocSPARSE: 309.42 GFLOPS
+- CSR: 5091.30 GFLOPS
+- COO: 5083.93 GFLOPS
+- Block-CSR: 4505.60 GFLOPS
+
+**Findings:**
+1. Winograd's algorithm shows impressive performance for small matrices but faces accuracy challenges at larger sizes
+2. rocBLAS performance scales well with matrix size for dense operations
+3. Our custom sparse implementations significantly outperform rocSPARSE:
+   - Custom CSR is up to ~16x faster than rocSPARSE
+   - Custom COO and Block-CSR also show excellent performance
+   - All formats maintain reasonable accuracy compared to reference
+4. For sparse matrices at N=512:
+   - Custom CSR achieves best performance at 5091.30 GFLOPS
+   - COO follows closely at 5083.93 GFLOPS
+   - Block-CSR shows good performance at 4505.60 GFLOPS
+   - All custom implementations outperform both rocBLAS and rocSPARSE (for those tests, bigger matrices benchmarking is neededed)
+
+
+
 
 
 ### Future challenges:
