@@ -690,6 +690,17 @@ Sparse Matrix Multiplication (N=512, density=0.1):
    - COO follows closely at 5083.93 GFLOPS
    - Block-CSR shows good performance at 4505.60 GFLOPS
    - All custom implementations outperform both rocBLAS and rocSPARSE (for those tests, bigger matrices benchmarking is neededed)
+## Day 34
+### Files: `vec_add_cpu.c`, `vec_add_gpu.cu`, `benchmark.py`
+**Summary:**  
+
+Today I  compared the performance of vector addition implemented using two different approaches:
+
+CPU with MPI and Loop Unrolling - Parallelized across multiple CPU cores using MPI.
+
+GPU with CUDA - Executed on a GPU for massive parallelism.
+
+The script runs performance tests on different input sizes and generates a log-log scale plot comparing execution times.
 
 
 
