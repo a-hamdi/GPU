@@ -700,7 +700,9 @@ GPU with CUDA - Executed on a GPU for massive parallelism.
 The script runs performance tests on different input sizes and generates a log-log scale plot comparing execution times.
 
 
-
+## Day 35
+### Files: `3_body_problem.cu`
+Implemented a CUDA-based simulation of the Three-Body Problem, a classical physics problem describing the motion of three celestial bodies under mutual gravitational influence.
 
 
 ### Future challenges:
