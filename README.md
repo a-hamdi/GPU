@@ -704,6 +704,11 @@ The script runs performance tests on different input sizes and generates a log-l
 ### Files: `3_body_problem.cu`
 Implemented a CUDA-based simulation of the Three-Body Problem, a classical physics problem describing the motion of three celestial bodies under mutual gravitational influence.
 
+## Day 36
+### Files: `heat_diffusion.cpp`
+Implemented a 2D heat diffusion simulation using HIP (Heterogeneous-Computing Interface for Portability). The simulation models how heat spreads across a 2D grid over time using the finite difference method. The implementation leverages GPU parallelism to accelerate the computation of temperature changes across the grid.
+
+
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
