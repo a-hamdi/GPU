@@ -708,7 +708,9 @@ Implemented a CUDA-based simulation of the Three-Body Problem, a classical physi
 ### Files: `heat_diffusion.cpp`
 Implemented a 2D heat diffusion simulation using HIP (Heterogeneous-Computing Interface for Portability). The simulation models how heat spreads across a 2D grid over time using the finite difference method. The implementation leverages GPU parallelism to accelerate the computation of temperature changes across the grid.
 
-
+## Day 37
+### Files: `cuda_ray_tracing.cu`
+Today, I implemented a basic ray tracing algorithm in CUDA to simulate optical phenomena. The kernel casts rays from a virtual camera and computes intersections with a sphere, coloring pixels based on the hit points.
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
