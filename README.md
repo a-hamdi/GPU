@@ -712,6 +712,10 @@ Implemented a 2D heat diffusion simulation using HIP (Heterogeneous-Computing In
 ### Files: `cuda_ray_tracing.cu`
 Today, I implemented a basic ray tracing algorithm in CUDA to simulate optical phenomena. The kernel casts rays from a virtual camera and computes intersections with a sphere, coloring pixels based on the hit points.
 
+## Day 38
+### Files: `vector_addition_triton.py`
+Today I implemented the vector addition kernel in triton.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
