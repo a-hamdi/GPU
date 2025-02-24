@@ -720,6 +720,10 @@ Today I implemented the vector addition kernel in triton.
 ### Files: `matrixMult_triton.py`
 Today I implemented the matrix multiplication kernel in triton.
 
+## Day 40
+### Files: `softmax_triton.py`
+I implemented the softmax kernel in triton.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
