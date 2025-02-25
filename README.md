@@ -728,7 +728,7 @@ I also implemented Native Sparse Attention in pure c and cuda! here : https://gi
 
 ## Day 41
 ### Files: `Fused_MatMul_ReLU.py`
-I implemented a fused Matrix Multiplication and ReLU kernel.
+I implemented a fused Matrix Multiplication and ReLU kernel in triton.
 
 
 ### Future challenges:
