@@ -731,6 +731,10 @@ I also implemented Native Sparse Attention in pure c and cuda! here : https://gi
 I implemented a fused Matrix Multiplication and ReLU kernel in triton.
 
 
+## Day 42
+### Files: `1d_convolution_triton.py`
+I implemented a Triton kernel for 1D convolution.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
