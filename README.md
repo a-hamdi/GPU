@@ -735,6 +735,11 @@ I implemented a fused Matrix Multiplication and ReLU kernel in triton.
 ### Files: `1d_convolution_triton.py`
 I implemented a Triton kernel for 1D convolution.
 
+## Day 43
+### Files: `MatrixMul_Autotuning_Triton.py`
+I implemented Full Triton Matrix Multiplication Code with Autotuning.
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
