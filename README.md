@@ -747,9 +747,10 @@ I completed two challenges on leetgpu.com, both at the hardest level among all c
 ### Files:`leetgpu_boids.cu` 
 I implemented a CUDA-based multi-agent flocking simulation (boids) using parallel computing. The simulation processes an array of agents, each represented by four consecutive 32-bit floating point values: two for position (x, y) and two for velocity (vx, vy). The program efficiently identifies neighboring agents within a given radius, computes the average velocity of neighbors, and updates each agent’s velocity and position accordingly. By leveraging CUDA's parallel execution, the simulation achieves high-performance real-time flocking dynamics.
 
+## Day 46
+### Files:`Muon.cu` 
 
-
-
+I implemented the Muon optimization algorithm in CUDA, leveraging GPU parallelism for efficient gradient computation and parameter updates. The implementation follows the algorithm's key steps: computing the gradient, applying momentum-based accumulation, approximating the inverse square root using the Newton-Schulz method, and updating the parameters. The CUDA kernel efficiently handles element-wise operations on tensors, ensuring high-performance execution. By utilizing shared memory and optimized matrix operations, the implementation accelerates the Muon algorithm, making it suitable for large-scale machine learning tasks.
 
 
 
