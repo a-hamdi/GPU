@@ -752,7 +752,15 @@ I implemented a CUDA-based multi-agent flocking simulation (boids) using paralle
 
 I implemented the Muon optimization algorithm in CUDA, leveraging GPU parallelism for efficient gradient computation and parameter updates. The implementation follows the algorithm's key steps: computing the gradient, applying momentum-based accumulation, approximating the inverse square root using the Newton-Schulz method, and updating the parameters. The CUDA kernel efficiently handles element-wise operations on tensors, ensuring high-performance execution. By utilizing shared memory and optimized matrix operations, the implementation accelerates the Muon algorithm, making it suitable for large-scale machine learning tasks.
 
+## Day 47
+### Files: `spba_multi_gpu.cpp`
 
+I implemented a multi-GPU Single-Parameter Bees Algorithm (SPBA) using HIP, which leverages parallel GPU execution to evaluate candidate solutions concurrently. In this implementation, the algorithm optimizes a test function (Sphere function) by iteratively refining a population of candidate solutions. A single parameter (α) controls the perturbation magnitude during local search, striking a balance between exploration and exploitation. HIP kernels perform the heavy lifting by calculating objective values in parallel across multiple GPUs, while the CPU orchestrates the selection, local search, and global random search steps. This approach makes the algorithm highly scalable and efficient for large-scale optimization tasks on systems equipped with many GPUs.
+
+## Day 48
+### Files: `lbfgs.cu`
+
+I implemented a CUDA-based version of the L-BFGS optimization algorithm, leveraging GPU parallelism to accelerate the two-loop recursion for search direction computation. The implementation includes custom CUDA kernels for parallel dot product computation, vector operations (subtraction, scaling, addition), and efficient memory management to minimize host-device communication. The search direction is computed using a simplified two-loop recursion, updating intermediate vectors based on correction pairs and scaling factors. By optimizing memory access and reducing redundant computations, this implementation enhances performance for large-scale optimization tasks in machine learning and scientific computing.
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
