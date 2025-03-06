@@ -762,6 +762,18 @@ I implemented a multi-GPU Single-Parameter Bees Algorithm (SPBA) using HIP, whic
 
 I implemented a CUDA-based version of the L-BFGS optimization algorithm, leveraging GPU parallelism to accelerate the two-loop recursion for search direction computation. The implementation includes custom CUDA kernels for parallel dot product computation, vector operations (subtraction, scaling, addition), and efficient memory management to minimize host-device communication. The search direction is computed using a simplified two-loop recursion, updating intermediate vectors based on correction pairs and scaling factors. By optimizing memory access and reducing redundant computations, this implementation enhances performance for large-scale optimization tasks in machine learning and scientific computing.
 
+## Day 49
+### Files: `cgm.cu`
+
+I implemented a CUDA-based Conjugate Gradient Method (CGM) solver to efficiently solve linear systems Ax=b by iteratively updating search directions without computing Hessians, leveraging GPU parallelism. The implementation includes custom CUDA kernels for matrix–vector multiplication, vector arithmetic (addition, subtraction, scaling), and a shared memory reduction for dot products, ensuring high-performance execution. This approach optimizes memory access and computation, making it suitable for large-scale problems in machine learning and scientific computing while demonstrating how iterative solvers can benefit from GPU acceleration.
+
+
+## Day 50
+### Files: `fp32_fp16_fp8_t4.cu`
+Today I implemented a comprehensive CUDA benchmark to explore the performance, memory efficiency, and accuracy tradeoffs between different floating-point precision formats (FP32, FP16, and FP8) for matrix multiplication on NVIDIA Tensor Cores. The implementation demonstrates how reduced precision can significantly accelerate deep learning workloads while reducing memory requirements.
+
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
