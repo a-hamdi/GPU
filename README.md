@@ -772,6 +772,10 @@ I implemented a CUDA-based Conjugate Gradient Method (CGM) solver to efficiently
 ### Files: `fp32_fp16_fp8_t4.cu`
 Today I implemented a comprehensive CUDA benchmark to explore the performance, memory efficiency, and accuracy tradeoffs between different floating-point precision formats (FP32, FP16, and FP8) for matrix multiplication on NVIDIA Tensor Cores. The implementation demonstrates how reduced precision can significantly accelerate deep learning workloads while reducing memory requirements.
 
+## Day 51
+### Files: `lstm.cu`
+
+Today I implemented a CUDA-based LSTM (Long Short-Term Memory) simulation that processes multiple timesteps on the GPU. The core of the implementation is a custom LSTM kernel that efficiently computes the cell and hidden state updates for each neuron in parallel.
 
 
 ### Future challenges:
