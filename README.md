@@ -777,6 +777,12 @@ Today I implemented a comprehensive CUDA benchmark to explore the performance, m
 
 Today I implemented a CUDA-based LSTM (Long Short-Term Memory) simulation that processes multiple timesteps on the GPU. The core of the implementation is a custom LSTM kernel that efficiently computes the cell and hidden state updates for each neuron in parallel.
 
+## Day 52: 
+### Files: `A whole reposotory`
+𝐖𝐞𝐫𝐞 𝐑𝐍𝐍𝐬 𝐀𝐥𝐥 𝐖𝐞 𝐍𝐞𝐞𝐝𝐞𝐝?
+I implemented this paper in pure C and AMD HIP, removing the dependency on PyTorch from the official implementation. This version is faster as it leverages accelerated functions for model construction.
+
+Check it out here: https://github.com/a-hamdi/minimal_rnn/
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
