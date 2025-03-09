@@ -784,6 +784,10 @@ I implemented this paper in pure C and AMD HIP, removing the dependency on PyTor
 
 Check it out here: https://github.com/a-hamdi/minimal_rnn/
 
+## Day 53: 
+### Files: `AdaHessian`
+I implemented the AdaHessian optimization algorithm using CUDA. AdaHessian is an adaptive optimizer that incorporates second-order information by approximating the diagonal of the Hessian matrix. This enables the algorithm to adjust per-parameter learning rates more effectively than first-order methods, potentially leading to improved convergence in deep learning and scientific computing tasks.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
