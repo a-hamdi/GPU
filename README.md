@@ -788,6 +788,13 @@ Check it out here: https://github.com/a-hamdi/minimal_rnn/
 ### Files: `AdaHessian`
 I implemented the AdaHessian optimization algorithm using CUDA. AdaHessian is an adaptive optimizer that incorporates second-order information by approximating the diagonal of the Hessian matrix. This enables the algorithm to adjust per-parameter learning rates more effectively than first-order methods, potentially leading to improved convergence in deep learning and scientific computing tasks.
 
+## Day 54:
+### Files: `lstm_bidirectional.cu`
+
+I implemented a bidirectional Long Short-Term Memory (LSTM) network in CUDA, allowing for efficient parallel computation of recurrent neural networks (RNNs) on GPUs. The implementation includes forward and backward passes for sequence processing, enabling better context retention in tasks such as natural language processing (NLP) and time-series analysis.
+
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
