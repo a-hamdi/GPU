@@ -794,7 +794,11 @@ I implemented the AdaHessian optimization algorithm using CUDA. AdaHessian is an
 I implemented a bidirectional Long Short-Term Memory (LSTM) network in CUDA, allowing for efficient parallel computation of recurrent neural networks (RNNs) on GPUs. The implementation includes forward and backward passes for sequence processing, enabling better context retention in tasks such as natural language processing (NLP) and time-series analysis.
 
 
-
+## Day 55:
+### Files: `ddpm_benchmark.py`
+In this experiment, I implemented and benchmarked the DDPM (Denoising Diffusion Probabilistic Model) update step using both CUDA and PyTorch. The goal was to evaluate the speed difference between a custom CUDA kernel and PyTorch's native tensor operations.
+CUDA Kernel Time: 0.0628 ms vs PyTorch Time: 0.6710 ms
+Speedup: 10.69x
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
