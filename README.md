@@ -799,6 +799,20 @@ I implemented a bidirectional Long Short-Term Memory (LSTM) network in CUDA, all
 In this experiment, I implemented and benchmarked the DDPM (Denoising Diffusion Probabilistic Model) update step using both CUDA and PyTorch. The goal was to evaluate the speed difference between a custom CUDA kernel and PyTorch's native tensor operations.
 CUDA Kernel Time: 0.0628 ms vs PyTorch Time: 0.6710 ms
 Speedup: 10.69x
+
+
+## Day 56:
+### Files: `ddpm_benchmark_updated.py`
+Based on the insightful feedback from my previous DDPM benchmark post, I've updated the code to ensure a fair, one-to-one comparison between the custom CUDA kernel and PyTorch's native operations.
+I updated the code by considering:
+-Randomized Inputs on Every Iteration
+-Precomputation of Constants
+-using torch.cuda.synchronize()
+-using torch.cuda.Event
+
+CUDA Kernel Time: 0.0454 ms
+PyTorch Time (isolated update): 0.4205 ms
+Speedup: 9.26x
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
