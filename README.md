@@ -813,6 +813,10 @@ I updated the code by considering:
 CUDA Kernel Time: 0.0454 ms
 PyTorch Time (isolated update): 0.4205 ms
 Speedup: 9.26x
+## Day 57:
+### Files: `mish.cu`
+Implemented the mish activation function in cuda.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
