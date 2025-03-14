@@ -817,6 +817,11 @@ Speedup: 9.26x
 ### Files: `mish.cu`
 Implemented the mish activation function in cuda.
 
+## Day 58:
+### Files: `wavelet_triton.py`
+I implemented a GPU-accelerated Haar wavelet transform using Triton. The goal was to leverage Triton’s custom kernel capabilities to perform a 2×2 Haar wavelet decomposition on images efficiently, demonstrating how low-level GPU programming can be applied for image processing tasks.
+
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
