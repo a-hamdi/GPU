@@ -821,6 +821,9 @@ Implemented the mish activation function in cuda.
 ### Files: `wavelet_triton.py`
 I implemented a GPU-accelerated Haar wavelet transform using Triton. The goal was to leverage Triton’s custom kernel capabilities to perform a 2×2 Haar wavelet decomposition on images efficiently, demonstrating how low-level GPU programming can be applied for image processing tasks.
 
+## Day 59:
+### Files: `LayerNorm.py`
+Implemented the Layer Normalization function in triton.
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
