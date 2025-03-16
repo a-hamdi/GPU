@@ -825,6 +825,10 @@ I implemented a GPU-accelerated Haar wavelet transform using Triton. The goal wa
 ### Files: `LayerNorm.py`
 Implemented the Layer Normalization function in triton.
 
+## Day 60:
+### Files: `Bitonic_Sort.cu`
+Today I implemented a Bitonic Sort algorithm in CUDA! This version is optimized for GPUs by leveraging shared memory to accelerate the sorting process. Sorting occurs entirely in shared memory, which reduces global memory accesses and improves performance for small-to-medium array sizes.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
