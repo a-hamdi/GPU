@@ -833,6 +833,10 @@ Today I implemented a Bitonic Sort algorithm in CUDA! This version is optimized 
 ### Files: `simulated_annealing_triton.py`
 I implemented a Simulated Annealing (SA) algorithm that leverages Triton to accelerate the evaluation of the objective function on the GPU.
 
+## Day 62:
+### Files: `SN.cu`
+I implemented Spectral Normalization (SN) using CUDA. Spectral Normalization is a technique used to stabilize the training of neural networks, particularly Generative Adversarial Networks (GANs), by controlling the Lipschitz constant of the discriminator function. This is achieved by normalizing the weight matrices of the network layers to have a spectral norm (largest singular value) of one, thereby preventing uncontrolled growth of the network's outputs.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
