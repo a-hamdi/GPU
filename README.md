@@ -841,10 +841,15 @@ I implemented Spectral Normalization (SN) using CUDA. Spectral Normalization is 
 ### Files: `group_norm.cu`
 I tackled the implementation of a Group Normalization forward pass using CUDA.
 
-## Day 4:
+## Day 64:
 ### Files: `kl_divergence.cu`
 
 Today, I implemented the KL divergence loss (forward and backward passes) in CUDA, inspired by the Liger Triton kernel implementation. This CUDA version is designed to mirror the functionality of the Triton kernel but leverages native CUDA C++ for potentially improved performance and greater control over kernel behavior.
+
+## Day 65:
+### Files: `geglu.cu`
+I implemented GEGLU kernel in CUDA C++ for direct GPU execution inspired by the Liger Triton kernel implementation. The GEGLU function—combining a gated linear unit with a tanh activation—is implemented with two custom CUDA kernels handling both the forward and backward passes.
+
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
