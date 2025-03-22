@@ -848,8 +848,13 @@ Today, I implemented the KL divergence loss (forward and backward passes) in CUD
 
 ## Day 65:
 ### Files: `geglu.cu`
-I implemented GEGLU kernel in CUDA C++ for direct GPU execution inspired by the Liger Triton kernel implementation. The GEGLU function—combining a gated linear unit with a tanh activation—is implemented with two custom CUDA kernels handling both the forward and backward passes.
 
+I implemented GEGLU kernel in CUDA C++ for direct GPU execution inspired by the Liger Triton kernel implementation combining a gated linear unit with a tanh activation implemented with two custom CUDA kernels handling both the forward and backward passes.
+
+## Day 66:
+### Files: `swiglu.cu`
+
+Today i implemented a GEGLU (Gated Exponential Linear Unit) kernel in CUDA C++ for direct GPU execution. The implementation is inspired by the Liger Triton kernel code and adapts similar low-level techniques into CUDA for improved control and potential performance benefits.
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
