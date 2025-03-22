@@ -854,7 +854,7 @@ I implemented GEGLU kernel in CUDA C++ for direct GPU execution inspired by the 
 ## Day 66:
 ### Files: `swiglu.cu`
 
-I re-implemented the Liger Triton kernel in native CUDA C++ to perform a SiLU‑multiplicative operation and its backward pass for gradient computation, where the forward pass computes c = silu(a) × b (with silu(a) = a × sigmoid(a)) and the backward pass derives gradients for a and b by recomputing necessary activations; the code processes a 2D matrix in row‑major order using one CUDA block per row and one thread per column, and it includes memory allocation and kernel launches for both forward and backward passes with sample data.
+I re-implemented the Liger Triton kernel in native CUDA C++ to perform a SwiGLU operation and its backward pass for gradient computation, where the forward pass computes c = silu(a) × b (with silu(a) = a × sigmoid(a)) and the backward pass derives gradients for a and b by recomputing necessary activations; the code processes a 2D matrix in row‑major order using one CUDA block per row and one thread per column, and it includes memory allocation and kernel launches for both forward and backward passes with sample data.
 
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
