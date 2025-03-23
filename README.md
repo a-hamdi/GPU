@@ -856,6 +856,11 @@ I implemented GEGLU kernel in CUDA C++ for direct GPU execution inspired by the 
 
 I re-implemented the Liger Triton kernel in native CUDA C++ to perform a SwiGLU operation and its backward pass for gradient computation, where the forward pass computes c = silu(a) × b (with silu(a) = a × sigmoid(a)) and the backward pass derives gradients for a and b by recomputing necessary activations; the code processes a 2D matrix in row‑major order using one CUDA block per row and one thread per column, and it includes memory allocation and kernel launches for both forward and backward passes with sample data.
 
+
+## Day 67:
+### Files: `poisson_solver.cu`
+Today I implemented a CUDA-accelerated Jacobi solver for the 2D Poisson equation. The goal was to solve ∇²u=f using a finite-difference scheme and iterative updates on a GPU.
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
