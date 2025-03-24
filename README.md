@@ -861,6 +861,12 @@ I re-implemented the Liger Triton kernel in native CUDA C++ to perform a SwiGLU 
 ### Files: `poisson_solver.cu`
 Today I implemented a CUDA-accelerated Jacobi solver for the 2D Poisson equation. The goal was to solve ∇²u=f using a finite-difference scheme and iterative updates on a GPU.
 
+## Day 68:
+### Files: `lora.cu`
+Today I implemented a LoRA (Low-Rank Adaptation) kernel in CUDA C++. This implementation fuses the low-rank update (A×B) with the base weight matrix (W) during the matrix multiplication.
+-GPU kernel execution time: 0.7592 ms
+-CPU execution time: 206.943 ms
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
