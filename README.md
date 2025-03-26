@@ -867,6 +867,21 @@ Today I implemented a LoRA (Low-Rank Adaptation) kernel in CUDA C++. This implem
 -GPU kernel execution time: 0.7592 ms
 -CPU execution time: 206.943 ms
 
+## Day 69:
+### Files: `k_means_leetgpu.cu`
+Today, I implemented a CUDA-accelerated K-Means Clustering for 2D data points as part of the newly added hard challenge on LeetGPU.
+
+
+## Day 70:
+### Files: `tv_distance.cu`
+Today I implemented the Total Variation Distance (TVD) Loss in CUDA C++ along with its backward pass for gradient computation. The kernel computes the TVD as  
+\[
+\text{TVD} = 0.5 \times |p - q|
+\]
+and calculates corresponding gradients by comparing \( p \) and \( q \). The implementation supports optional label-based ignoring (using an `ignore_index`) and offers multiple reduction options ("none", "sum", "mean", and "batchmean"). In addition to the GPU kernel, I provided a CPU version for benchmarking. The code benchmarks GPU execution (using CUDA events) against a CPU implementation (using C++ chrono) to highlight performance gains and validate correctness.
+
+---
+
 ### Future challenges:
 - Day 15 - mandatory FA2-forward   (Done)
 - Day 20 - mandatory FA2-bakcwards (Done)
