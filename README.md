@@ -880,6 +880,15 @@ Today I implemented the Total Variation Distance (TVD) Loss in CUDA C++ along wi
 ## Day 71:
 ### Files: `jsd_cuda.cu`
 In this implementation, I developed a CUDA C++ kernel for the generalized Jensen-Shannon Divergence (JSD) loss, including both forward and backward passes, entirely in CUDA.
+The GPU kernel processes each row of the input matrix with shared-memory reductions for numerical stability and handles different cases for beta values (forward KL, reverse KL, and a mixed case), while a custom reduction kernel sums the per-element losses to obtain a scalar output. Additionally, a CPU version of the forward pass is provided using nested loops for benchmarking, and execution times for both GPU (measured with CUDA events) and CPU (using C++ chrono) are compared to showcase the performance gains achieved on the GPU.
+
+
+
+
+## Day 72:
+### Files: `dyt.cu`
+
+I implemented the DyT (Dynamic Tanh) operation in a standalone CUDA C++ file (`dyt.cu`) without using any external frameworks. The implementation includes both the forward pass and the backward pass, which computes the gradients using atomic operations to safely accumulate values across threads. Memory allocation, data transfers, and kernel launches are manually managed, and a `main` function is provided to test the kernels by processing sample data and printing the results. 
 
 ---
 
