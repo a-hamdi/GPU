@@ -890,6 +890,16 @@ The GPU kernel processes each row of the input matrix with shared-memory reducti
 
 I implemented the DyT (Dynamic Tanh) operation in a standalone CUDA C++ file (`dyt.cu`) without using any external frameworks. The implementation includes both the forward pass and the backward pass, which computes the gradients using atomic operations to safely accumulate values across threads. Memory allocation, data transfers, and kernel launches are manually managed, and a `main` function is provided to test the kernels by processing sample data and printing the results. 
 
+## Day 73:
+### Files: `mrope.cu`
+Today, I implemented the Qwen2VL Multimodal Rotary Positional Embedding (M-RoPE) operation in pure CUDA C++. The implementation is self-contained and demonstrates both the forward and backward passes of the M-RoPE transformation.
+
+
+## Day 74:
+### Files: `fused_linear_softmax.cu`
+Today, I implemented a fused Linear transformation and Softmax cross-entropy loss computation in pure CUDA C++. The kernel performs matrix multiplication followed by Softmax activation and loss computation in a single pass to optimize memory efficiency and minimize redundant data transfers.
+
+
 ---
 
 ### Future challenges:
