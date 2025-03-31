@@ -900,6 +900,10 @@ Today, I implemented the Qwen2VL Multimodal Rotary Positional Embedding (M-RoPE)
 Today, I implemented a fused Linear transformation and Softmax cross-entropy loss computation in pure CUDA C++. The kernel performs matrix multiplication followed by Softmax activation and loss computation in a single pass to optimize memory efficiency and minimize redundant data transfers.
 
 
+## Day 75:
+### Files: `contrastive_loss.cu`
+Today, I implemented the Contrastive Loss function in pure CUDA C++ with both forward and backward passes. The forward kernel computes the loss for each sample pair by calculating the Euclidean distance between feature vectors and applying the margin-based formulation, while the backward kernel computes gradients for the inputs. A complete main function is provided to initialize data, launch the kernels, and retrieve sample loss values for verification.
+
 ---
 
 ### Future challenges:
