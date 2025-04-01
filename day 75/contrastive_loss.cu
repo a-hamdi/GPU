@@ -43,7 +43,7 @@ __global__ void contrastive_loss_forward(
     }
 }
 
-
+// CPU function to initialize random data
 void initialize_data(float* x1, float* x2, int* labels, int batch_size, int dim) {
     for (int i = 0; i < batch_size * dim; i++) {
         x1[i] = static_cast<float>(rand()) / RAND_MAX;  
