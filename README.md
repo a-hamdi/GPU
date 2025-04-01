@@ -907,6 +907,7 @@ Today, I implemented the Contrastive Loss function in pure CUDA with both forwar
 
 ## Day 76:
 ### Files: `triplet_loss.cu`
+
 I implemented the Triplet Loss function in pure CUDA C++ with both forward and backward computations. This function is widely used in metric learning applications such as FaceNet for learning similarity relationships.
 ---
 
