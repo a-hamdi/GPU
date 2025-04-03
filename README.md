@@ -911,8 +911,11 @@ I implemented the Triplet Loss function in pure CUDA C++ with both forward and b
 
 ## Day 77:
 ### Files: `upperTriangularMatMulKernel.cu`
-I implemented a code that Performs matrix multiplication of two upper triangular matrices
+I implemented a code that Performs matrix multiplication of two upper triangular matrices.
 
+## Day 78:
+### Files: `Huber_Loss.cu`
+I implemented a code that Performs the element-wise Huber Loss (specifically, Smooth L1 Loss, which is Huber Loss with δ=1) between two input tensors.
 
 ---
 
