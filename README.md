@@ -917,6 +917,9 @@ I implemented a code that Performs matrix multiplication of two upper triangular
 ### Files: `Huber_Loss.cu`
 I implemented a code that Performs the element-wise Huber Loss (specifically, Smooth L1 Loss, which is Huber Loss with δ=1) between two input tensors.
 
+## Day 79:
+### Files: `matmul_swish.cu`
+I implemented a code that performs matrix multiplication followed by Swish activation and scaling.
 ---
 
 ### Future challenges:
