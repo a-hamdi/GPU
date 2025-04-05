@@ -920,6 +920,12 @@ I implemented a code that Performs the element-wise Huber Loss (specifically, Sm
 ## Day 79:
 ### Files: `matmul_swish.cu`
 I implemented a code that performs matrix multiplication followed by Swish activation and scaling.
+
+
+## Day 80:
+### Files: `3d_average_pooling.cu`
+I implemented a code that performs 3D average pooling on an input tensor.
+
 ---
 
 ### Future challenges:
