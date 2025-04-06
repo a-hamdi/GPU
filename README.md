@@ -926,6 +926,13 @@ I implemented a code that performs matrix multiplication followed by Swish activ
 ### Files: `3d_average_pooling.cu`
 I implemented a code that performs 3D average pooling on an input tensor.
 
+
+
+
+## Day 81:
+### Files: `Softplus.cu`
+I implemented a code that performs Softplus on an input tensor.
+
 ---
 
 ### Future challenges:
