@@ -933,6 +933,11 @@ I implemented a code that performs 3D average pooling on an input tensor.
 ### Files: `Softplus.cu`
 I implemented a code that performs Softplus on an input tensor.
 
+
+## Day 82:
+### Files: `negative_cosine_similarity.cu`
+I implemented a code that performs the negative cosine similarity for each pair of vectors in the predictions and targets tensors.
+
 ---
 
 ### Future challenges:
