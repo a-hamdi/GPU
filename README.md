@@ -927,8 +927,6 @@ I implemented a code that performs matrix multiplication followed by Swish activ
 I implemented a code that performs 3D average pooling on an input tensor.
 
 
-
-
 ## Day 81:
 ### Files: `Softplus.cu`
 I implemented a code that performs Softplus on an input tensor.
@@ -937,6 +935,14 @@ I implemented a code that performs Softplus on an input tensor.
 ## Day 82:
 ### Files: `negative_cosine_similarity.cu`
 I implemented a code that performs the negative cosine similarity for each pair of vectors in the predictions and targets tensors.
+
+## Day 83:
+### Files: `min_over_dim.cu`
+I implemented a code that performs min reduction over a specified dimension of an input tensor.
+
+
+
+
 
 ---
 
