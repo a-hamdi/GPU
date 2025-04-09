@@ -941,7 +941,9 @@ I implemented a code that performs the negative cosine similarity for each pair 
 I implemented a code that performs min reduction over a specified dimension of an input tensor.
 
 
-
+## Day 84:
+### Files: `Cumulative_Product.cu`
+I implemented a code that performs the cumulative product (also known as prefix product or scan) of an input array. 
 
 
 ---
