@@ -945,7 +945,9 @@ I implemented a code that performs min reduction over a specified dimension of a
 ### Files: `Cumulative_Product.cu`
 I implemented a code that performs the cumulative product (also known as prefix product or scan) of an input array. 
 
-
+## Day 85:
+### Files: `TensorMatMul.cu`
+I implemented a code that performs 4D tensor-matrix multiplication of two tensors.
 ---
 
 ### Future challenges:
