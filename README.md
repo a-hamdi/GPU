@@ -948,6 +948,11 @@ I implemented a code that performs the cumulative product (also known as prefix 
 ## Day 85:
 ### Files: `TensorMatMul.cu`
 I implemented a code that performs 4D tensor-matrix multiplication of two tensors.
+
+## Day 86:
+### Files: `hard_sigmoid.cu`
+I implemented a code that performs the Hard Sigmoid activation function on an input matrix:
+
 ---
 
 ### Future challenges:
