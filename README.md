@@ -953,6 +953,10 @@ I implemented a code that performs 4D tensor-matrix multiplication of two tensor
 ### Files: `hard_sigmoid.cu`
 I implemented a code that performs the Hard Sigmoid activation function on an input matrix:
 
+
+## Day 87:
+### Files: `SymMatMul.cu`
+I implemented a code that performs the multiplication of two symmetric matrices.
 ---
 
 ### Future challenges:
