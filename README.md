@@ -957,6 +957,12 @@ I implemented a code that performs the Hard Sigmoid activation function on an in
 ## Day 87:
 ### Files: `SymMatMul.cu`
 I implemented a code that performs the multiplication of two symmetric matrices.
+
+
+## Day 88:
+### Files: `MSE.cu`
+I implemented a code that performs the multiplication of two symmetric matrices.
+
 ---
 
 ### Future challenges:
