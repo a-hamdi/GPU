@@ -961,7 +961,12 @@ I implemented a code that performs the multiplication of two symmetric matrices.
 
 ## Day 88:
 ### Files: `MSE.cu`
-I implemented a code that performs the multiplication of two symmetric matrices.
+I implemented a code that performs the Mean Squared Error.
+
+
+## Day 89:
+### Files: `LTMM.cu`
+I implemented a code that performs matrix multiplication of two lower triangular matrices.
 
 ---
 
