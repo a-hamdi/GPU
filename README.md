@@ -968,6 +968,13 @@ I implemented a code that performs the Mean Squared Error.
 ### Files: `LTMM.cu`
 I implemented a code that performs matrix multiplication of two lower triangular matrices.
 
+
+## Day 90:
+### Files: `FrobeniusNorm.cu`
+I implemented a code that performs matrix multiplication of two lower triangular matrices.
+
+
+
 ---
 
 ### Future challenges:

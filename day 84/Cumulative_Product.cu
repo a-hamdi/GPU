@@ -7,6 +7,5 @@
 extern "C" void solution(const float* input, float* output, size_t N) {
     thrust::device_ptr<const float> dev_input(input);
     thrust::device_ptr<float> dev_output(output);
-
     thrust::inclusive_scan(dev_input, dev_input + N, dev_output, thrust::multiplies<float>());
 }
