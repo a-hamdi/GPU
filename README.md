@@ -971,7 +971,13 @@ I implemented a code that performs matrix multiplication of two lower triangular
 
 ## Day 90:
 ### Files: `FrobeniusNorm.cu`
-I implemented a code that performs matrix multiplication of two lower triangular matrices.
+I implemented a code that performs thee Frobenius Norm.
+
+## Day 91:
+### Files: `Hinge_Loss.cu`
+I implemented a code that performs the hinge loss.
+
+
 
 
 
