@@ -979,6 +979,10 @@ I implemented a code that performs the hinge loss.
 
 
 
+## Day 92:
+### Files: `1D_Convolution.cu`
+I implemented a code that performs the 1D Convolution.
+
 
 
 ---
