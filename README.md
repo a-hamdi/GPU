@@ -986,6 +986,9 @@ I implemented a code that performs the 1D Convolution.
 ### Files: `RMS_Normalization.cu`
 I implemented a code that performs the RMS (Root Mean Square) Normalization on a 2D tensor.
 
+## Day 94:
+### Files: `ELU.cu`
+I implemented a code that performs the ELU (Exponential Linear Unit) activation function on an input matrix.
 
 ---
 
