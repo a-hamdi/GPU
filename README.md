@@ -977,12 +977,14 @@ I implemented a code that performs thee Frobenius Norm.
 ### Files: `Hinge_Loss.cu`
 I implemented a code that performs the hinge loss.
 
-
-
 ## Day 92:
 ### Files: `1D_Convolution.cu`
 I implemented a code that performs the 1D Convolution.
 
+
+## Day 93:
+### Files: `RMS_Normalization.cu`
+I implemented a code that performs the RMS (Root Mean Square) Normalization on a 2D tensor.
 
 
 ---
