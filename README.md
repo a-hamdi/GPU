@@ -990,6 +990,10 @@ I implemented a code that performs the RMS (Root Mean Square) Normalization on a
 ### Files: `ELU.cu`
 I implemented a code that performs the ELU (Exponential Linear Unit) activation function on an input matrix.
 
+## Day 95:
+### Files: `2D_Max_Pooling.cu`
+I implemented a code that performs the 2D max pooling on an input tensor.
+
 ---
 
 ### Future challenges:
