@@ -994,6 +994,11 @@ I implemented a code that performs the ELU (Exponential Linear Unit) activation 
 ### Files: `2D_Max_Pooling.cu`
 I implemented a code that performs the 2D max pooling on an input tensor.
 
+
+## Day 96:
+### Files: `Product_Over_Dimension.cu`
+I implemented a code that performs the product reduction over a specified dimension of an input tensor.
+
 ---
 
 ### Future challenges:
