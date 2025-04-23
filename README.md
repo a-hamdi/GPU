@@ -999,6 +999,13 @@ I implemented a code that performs the 2D max pooling on an input tensor.
 ### Files: `Product_Over_Dimension.cu`
 I implemented a code that performs the product reduction over a specified dimension of an input tensor.
 
+## Day 97:
+### Files: `elu_optim.cu`
+I optimized my previous code that applies the ELU (Exponential Linear Unit) activation function to an input matrix.
+The optimizations include: float4 loads for FP32 tails, __half2 vectorized ELU for even-indexed FP16 elements, branchless logic, fused multiply-add (FMA), and __exp2f for faster exponentiation.
+
+
+
 ---
 
 ### Future challenges:
