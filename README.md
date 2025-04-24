@@ -1008,6 +1008,9 @@ The optimizations include: float4 loads for FP32 tails, __half2 vectorized ELU f
 ### Files: `leaky_relu.cu`
 I optimized my previous code that applies the Leaky ReLU (Leaky Rectified Linear Unit) activation function on an input matrix.
 
+## Day 99:
+### Files: `GEMM_Bias_ReLU.cu`
+I implemented a code that performs a matrix multiplication followed by bias addition and ReLU activation.
 
 ---
 
