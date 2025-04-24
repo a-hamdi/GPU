@@ -1004,6 +1004,9 @@ I implemented a code that performs the product reduction over a specified dimens
 I optimized my previous code that applies the ELU (Exponential Linear Unit) activation function to an input matrix.
 The optimizations include: float4 loads for FP32 tails, __half2 vectorized ELU for even-indexed FP16 elements, branchless logic, fused multiply-add (FMA), and __exp2f for faster exponentiation.
 
+## Day 98:
+### Files: `leaky_relu.cu`
+I optimized my previous code that applies the Leaky ReLU (Leaky Rectified Linear Unit) activation function on an input matrix.
 
 
 ---
