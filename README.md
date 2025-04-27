@@ -1012,6 +1012,11 @@ I optimized my previous code that applies the Leaky ReLU (Leaky Rectified Linear
 ### Files: `GEMM_Bias_ReLU.cu`
 I implemented a code that performs a matrix multiplication followed by bias addition and ReLU activation.
 
+## Day 100:
+### Files: `Kullback-Leibler.cu`
+I implemented a code that compute the element-wise Kullback-Leibler Divergence between two probability distributions, predictions and targets.
+![LeaderBoard](image.png)
+
 ---
 
 ### Future challenges:
